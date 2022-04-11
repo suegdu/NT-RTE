@@ -181,50 +181,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "NT Launcher 1.0", nullptr));
-#if QT_CONFIG(whatsthis)
-        MainWindow->setWhatsThis(QString());
-#endif // QT_CONFIG(whatsthis)
-        MainWindow->setWindowFilePath(QString());
-        groupBox->setTitle(QCoreApplication::translate("MainWindow", "Launcher", nullptr));
-        groupBox_2->setTitle(QCoreApplication::translate("MainWindow", "Settings", nullptr));
-        groupBox_6->setTitle(QCoreApplication::translate("MainWindow", "NT ", nullptr));
-        checkBox_debugmode->setText(QCoreApplication::translate("MainWindow", "Debug Mode", nullptr));
-        checkBox_temploader->setText(QCoreApplication::translate("MainWindow", "Temp Loader", nullptr));
-        checkBox_customloader->setText(QCoreApplication::translate("MainWindow", "Load Custom Extensions", nullptr));
-        label_nothingfornow->setText(QCoreApplication::translate("MainWindow", "Nohting For Now", nullptr));
-        groupBox_7->setTitle(QCoreApplication::translate("MainWindow", "System", nullptr));
-        pushButton_reset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
-        pushButton_restorefiles->setText(QCoreApplication::translate("MainWindow", "Restore Files", nullptr));
-        pushButton_verifyfiles->setText(QCoreApplication::translate("MainWindow", "Verify Files", nullptr));
-        label_2->setText(QCoreApplication::translate("MainWindow", "Will Reset Everything", nullptr));
-        label_3->setText(QCoreApplication::translate("MainWindow", "Restore The Missing Files", nullptr));
-        label_4->setText(QCoreApplication::translate("MainWindow", "Verify Files.", nullptr));
-        label_5->setText(QCoreApplication::translate("MainWindow", "NOTE: Watch The \"Status Log\" To Be \n"
-"Informed About The Prcoess.", nullptr));
-        groupBox_3->setTitle(QCoreApplication::translate("MainWindow", "NotAbleChanges", nullptr));
-        pushButton_github->setText(QCoreApplication::translate("MainWindow", "Github", nullptr));
-        pushButton_updates->setText(QCoreApplication::translate("MainWindow", "Updates", nullptr));
-        groupBox_4->setTitle(QCoreApplication::translate("MainWindow", "Start", nullptr));
-        pushButton_launchstart->setText(QCoreApplication::translate("MainWindow", "Launch NT 1.0", nullptr));
-        textBrowser_statuslogstart->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "Status Log :", nullptr));
-        label_note1->setText(QCoreApplication::translate("MainWindow", "NOTE: Some Settings Wont Be\n"
-" Applied In Action Until You \n"
-"Restart NT Or Faced \n"
-"A Force Boot Side.", nullptr));
-        label_note22->setText(QCoreApplication::translate("MainWindow", "NOTE: The Debug Mode May \n"
-"Cost Some Bugs And Hanging.", nullptr));
-        groupBox_5->setTitle(QCoreApplication::translate("MainWindow", "Information", nullptr));
-        label_launcherversion->setText(QCoreApplication::translate("MainWindow", "Launcher Version :", nullptr));
-        label_ntversion->setText(QCoreApplication::translate("MainWindow", "NT Version :", nullptr));
-        label_PTCversion->setText(QCoreApplication::translate("MainWindow", "PTC Version : 1.7.54", nullptr));
-        label_7->setText(QCoreApplication::translate("MainWindow", "Author : suegdu | suegdu Github. do not disturb!.  NT Are Licensed Under The Creative Commons Zero v1.0 Universal License.", nullptr));
-    } // retranslateUi
+
 
 };
 
