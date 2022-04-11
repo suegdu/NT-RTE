@@ -35,3 +35,9 @@ Collecting some data that is useful in improving the product and special additio
 The Package Service: `"NT Bound"`  
 You Will Be Asked To Install It During The Procede Of The Installation, To Install The Service Pack(NT Bound)
 + Which revolves around the information of the device that operates the product where there is the possibility to correct errors or discuss them if they are related to a particular model of devices. or sending reports using this pack service.(note: this program is in need of an internet connections sometimes. to work properly(in other words without being bothered by poping that you are not connected.)) but this is barely may happen and its only include the updates checking.(which is barely too ,***jk***)
+
+
+
+
+
+# NotAbleChanges (Changes)
