@@ -1,6 +1,6 @@
 # NT-RTE
 NT Runtime Environment. A Random Weird Substructure Runs Stable Underneath Windows (A Console Host)  
-Doesn't Have Any Specific Usage For It, But You're Free To Test It Around.
+Doesn't Have Any Specific Usage For It, But You're Free To Shit It Around.
 
 # Images
 
