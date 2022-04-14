@@ -30,7 +30,7 @@ You Go To The Releases Page <a href="https://github.com/suegdu/NT-RTE/releases">
 After Its Installed Properly, You Can Run The NT Launcher.
 
 
-# Optional Services (To Improve)
+# Optional Services 
 Collecting some data that is useful in improving the product and special additions in the future, and this information does not exceed the limit of the program, or you collect what is outside the program. You have the freedom to choose to download this service that is useful in product improvement and development, or you can use it without this service. It also gives you some of the features built into the service pack.  
 The Package Service: `"NT Bound"`  
 You Will Be Asked To Install It During The Procedure Of The Installation, To Install The Service Pack(NT Bound)
