@@ -1,6 +1,6 @@
 # NT-RTE
 NT Runtime Environment. A Substructure Runs Underneath Windows (A Console Host)  
-Doesn't Have Any Specific Usage For It, But You're Free To Shit It Around.
+Doesn't Have Any Specific Usage For It
   
   *it has some actual useful tools**
 
