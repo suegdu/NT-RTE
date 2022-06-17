@@ -31,14 +31,13 @@ Once Its Done You're Ready To Go And Run The Launcher. Follow The Below Instruct
 You Go To The Releases Page <a href="https://github.com/suegdu/NT-RTE/releases">Releases</a> And Download The NT Installer.exe And Follow The Desribed Steps There.
 After Its Installed Properly, You Can Run The NT Launcher.
 
-
-# Optional Services (Not available at the current time)
+<!---
+ # Optional Services (Not available at the current time)
 Collecting some data that is useful in improving the product and special additions in the future, and this information does not exceed the limit of the program, or you collect what is outside the program. You have the freedom to choose to download this service that is useful in product improvement and development, or you can use it without this service. It also gives you some of the features built into the service pack.  
 The Package Service: `"NT Bound"`  
 You Will Be Asked To Install It During The Procedure Of The Installation, To Install The Service Pack(NT Bound)
 + Which revolves around the information of the device that operates the product where there is the possibility to correct errors or discuss them if they are related to a particular model of devices. or sending reports using this pack service.(note: this program is in need of an internet connections sometimes. to work properly(in other words without being bothered by poping that you are not connected.)) but this is barely may happen and its only include the updates checking.(which is barely too ,***jk***)
-
-
+--->
 
 
 
