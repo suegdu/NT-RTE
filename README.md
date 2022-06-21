@@ -16,6 +16,8 @@ Doesn't Have Any Specific Usage For It
 
 
 # Installation
+You are required to have python3 and above installed.
+
 First Thing First You Must Know That The Source Code That Are Available On Github Right Here Are Unusable Its Just For Reviewing The Code (  **<ins>***You Cannot Install It Through Git Or Better yet You Will Face Some Bugs Or Even Wont Be Running Properly***</ins>**  ) You Have To Install It Through The Original(Stable) Source Code Which Is Contained In The .zip Folder In The Releases Page. <a href="https://github.com/suegdu/NT-RTE/releases">Releases</a> Or In Otherwise You Could Install It Through The Executeable .exe Installer Which Is The Easiest For The Regular Users. Also You Must Install The Libs.txt File By Running The Following Command In Your Terminal (Should Be Opened In The Same Directory Of Libs.txt)  
 ``` --> pip install -r Libs.txt```
 Once Its Done You're Ready To Go And Run The Launcher. Follow The Below Instructions Of The .zip Installation
