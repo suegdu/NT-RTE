@@ -20,14 +20,14 @@ First Thing First You Must Know That The Source Code That Are Available On Githu
 ``` --> pip install -r Libs.txt```
 Once Its Done You're Ready To Go And Run The Launcher. Follow The Below Instructions Of The .zip Installation
 
-### Download The .zip Folder To Run.
+### Download The .zip Folder From The Releases Page To Run.
 
 
 
 
 
 #
-### Download The Executeable Installer To Run.  (The Easiest And Recommended For Regular Users)
+### Download The Executeable Installer To Run.  (The Easiest And Recommended For Regular Users) (NOT AVAILABLE)
 You Go To The Releases Page <a href="https://github.com/suegdu/NT-RTE/releases">Releases</a> And Download The NT Installer.exe And Follow The Desribed Steps There.
 After Its Installed Properly, You Can Run The NT Launcher.
 
