@@ -153,6 +153,7 @@ def st():
  else:
     ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
     print("Please restart the installer and run it as an administrator. The installer have to be ran as an administrator to install components properly.")
+    sys.exit()
     input("Press Enter To Exit.")
     sys.exit()
 
@@ -418,7 +419,6 @@ def NT00d():
  print("Copying Files.....")
  try:
   shutil.copytree(ss,ee)
-  os.system("setx")
   print("OK.[8/9]")
   time.sleep(1)
  except:
@@ -447,8 +447,8 @@ psutil
 faker
 swinlnk
 """)
-      time.sleep(1)
-      os.system(f"pip install -r '{Path(__file__).resolve().parent}\\Libs.txt'")
+   time.sleep(2)
+   os.system(f"pip install -r '{Path(__file__).resolve().parent}\\Libs.txt'")
  except:
    print("[Error: Something went wrong during the installation of the requirements. Please make sure that you are connected to the internet.]")
    input("Press Enter To Exit.")
