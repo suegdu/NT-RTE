@@ -348,8 +348,8 @@ from your CMD or whatever your Terminal is.
         NT0_procedure()
 
 def NT00d():
- print("\n\n[The installing procedure will start in 5 seconds. Please DO NOT close the program until its done, \n you will informed once its done.]")
- time.sleep(5)
+ print("\n\n[The installing procedure will start in 3 seconds. Please DO NOT close the program until its done, \n you will informed once its done.]")
+ time.sleep(2)
  input("[Press Enter to start the Installation procedure]:> ")
  #os.chdir(Path(__file__).with_name("Storage"))
  #os.rmdir(Path(__file__).with_name("Main"))
