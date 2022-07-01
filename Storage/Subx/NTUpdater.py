@@ -355,14 +355,6 @@ except:
    print("[Error: Something went wrong during the removal procedure of the temp files. Make sure to re read the instructions.]")
    input("Enter To Exit")
    sys.exit()
-try:
-    print("Finals.....")
-    swl = SWinLnk()
-    swl.create_lnk(f'{Path(__file__).resolve().parent}\\Main\\Storage\\NT234.py', f'{Path(__file__).resolve().parent}\\Main\\Storage\\NT.lnk')
-except:
-    print("[Error: Something went wrong during the finals procedure. Make sure to re read the instructions.]")
-    input("Enter To Exit")
-    sys.exit()
 input("The Installation Procedure Has Finished Successfully. Press Enter To Exit")
 sys.exit()
 
