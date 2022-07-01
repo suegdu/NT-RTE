@@ -119,12 +119,13 @@ import requests
 
 vail = False
 def main():
- print("Checking for updates....")
- try:
+  print("Checking for updates....")
   INTEG = 1
-  verintget = requests.get("https://a.lt53434.repl.co").text
-  integ2 = int(verintget) 
-
+  try:
+   verintget = requests.get("https://a.lt53434.repl.co").text
+   integ2 = int(verintget) 
+  except:
+    print("[Error: Something went wrong during the 'checking for updates' procedure. Please make sure you are connected to the internet.]")
   if INTEG < integ2:
     print("Update found, starting the update procedure....")
     asi = input("Do you want to start the update procedure now? [YES,NO]caps.:> ")
@@ -138,8 +139,6 @@ def main():
        pass
   elif INTEG == integ2:
     print("Your NT Version is up to-date. For more informations, visit: https://github.com/suegdu/NT-RTE")
- except:
-   print("\n[Error: Something went wrong during the 'checking for updates' procedure. Please make sure you are connected to the \ninternet.]")
 def up(): 
  input("[Press Enter To Start]:> ")
  os.chdir("../")
