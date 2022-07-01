@@ -131,20 +131,6 @@ import  time
 import os
 import ctypes
 import sys
-def is_admin():
-    try:
-        return ctypes.windll.shell32.IsUserAnAdmin()
-    except:
-        return False
-if is_admin():
-   os.system(f'setx /M path "%path%;{Path(__file__).resolve().parent}\\NT\\Main\\Storage"')
-else:
-    ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
-    print("Please restart the installer and run it as an administrator. The installer have to be ran as an administrator to install components properly.")
-    input("Press Enter To Exit.")
-    sys.exit()
-
-print("NT Installer version: 1.0 Author: suegdu Source:https://github.com/suegdu/NT-RTE Github:https://github.com/suegdu")
 try:
  import shutil
  import requests
@@ -152,18 +138,26 @@ try:
  from zipfile import ZipFile
  from swinlnk.swinlnk import SWinLnk
 except:
- input("Please Press Enter To Start The Installation Procedure.")
- print("Now the installer will install the required libraries that are in need for the installer to be running. In 4 seconds. Please do not close the program until its finished. You will be informed once its done.")
- with open("./temp.txt","a") as fileT:
-   fileT.write("""
-pathlib
-requests
-swinlnk 
-""")
-   time.sleep(3)
-   os.system("pip install -r temp.txt")
-   print("Success.")
-   os.remove("./temp.txt")
+ input("ERROR : Please Make Sure To Install All The Required Libabries For The Installer. Libraries Are Listed In: https://github.com/suegdu/NT-RTE/blob/main/Installer-Libs.txt")
+ sys.exit()
+def is_admin():
+    try:
+        return ctypes.windll.shell32.IsUserAnAdmin()
+    except:
+        return False
+def st():
+
+ if is_admin():
+   NT0_main()
+   sys.exit()
+ else:
+    ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+    print("Please restart the installer and run it as an administrator. The installer have to be ran as an administrator to install components properly.")
+    input("Press Enter To Exit.")
+    sys.exit()
+
+print("NT Installer version: 1.0 Author: suegdu Source:https://github.com/suegdu/NT-RTE Github:https://github.com/suegdu")
+
 try:
  import shutil
  import requests
@@ -347,7 +341,7 @@ from your CMD or whatever your Terminal is.
     else:
         print("Error: Please Choose a correct input all caps. Press Enter to restart the installing procedure")
         input()
-        NT0_main()
+        NT0_procedure()
 
 def NT00d():
  print("\n\n[The installing procedure will start in 5 seconds. Please DO NOT close the program until its done, \n you will informed once its done.]")
@@ -419,8 +413,8 @@ def NT00d():
     print("[Error: Something went wrong during the redirecting directory procedure. Make sure to re read the instructions.]")
     input("Press Enter To Exit.")
     sys.exit()
- ss = "./NT-RTE-main"
- ee = "./NT/Main"
+ ss = "./NT-RTE-main/Storage"
+ ee = "./NT/Main/Storage"
  print("Copying Files.....")
  try:
   shutil.copytree(ss,ee)
@@ -462,7 +456,8 @@ swinlnk
  try:
    print("Installing Finals....")
    swl = SWinLnk()
-   swl.create_lnk(f'{Path(__file__).resolve().parent}\\NT\\Storage\\NT234.py', f'{Path(__file__).resolve().parent}\\NT\\Storage\\NT.lnk')
+   swl.create_lnk(f'{Path(__file__).resolve().parent}\\NT\\Main\\Storage\\NT234.py', f'{Path(__file__).resolve().parent}\\NT\\Main\\Storage\\NT.lnk')
+   os.system(f'setx /M path "%path%;{Path(__file__).resolve().parent}\\NT\\Main\\Storage"')
  except:
    print("[Error: Something went wrong during the installation of the Finals. Make sure to re read the instructions.]")
    input("Press Enter To Exit.")
@@ -470,5 +465,5 @@ swinlnk
  input("The Installation Procedure Has Finished Successfully. Press Enter To Exit\n\nNow you can run NT by typing 'NT' or 'nt' directly in your CMD or whatever your terminal is .\n")
  sys.exit()
 
-
-NT0_main()
+st()
+#NT0_main()
