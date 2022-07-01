@@ -1,1 +1,1 @@
-NT.lnk
+start NT234.py
