@@ -129,13 +129,27 @@ express Statement of Purpose.
 """
 import  time
 import os
+import ctypes
+import sys
+def is_admin():
+    try:
+        return ctypes.windll.shell32.IsUserAnAdmin()
+    except:
+        return False
+if is_admin():
+   os.system(f'setx /M path "%path%;{Path(__file__).resolve().parent}\\NT\\Main\\Storage"')
+else:
+    ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+    print("Please restart the installer and run it as an administrator. The installer have to be ran as an administrator to install components properly.")
+    input("Press Enter To Exit.")
+    sys.exit()
+
 print("NT Installer version: 1.0 Author: suegdu Source:https://github.com/suegdu/NT-RTE Github:https://github.com/suegdu")
 try:
  import shutil
  import requests
  from pathlib import Path
  from zipfile import ZipFile
- import sys
  from swinlnk.swinlnk import SWinLnk
 except:
  input("Please Press Enter To Start The Installation Procedure.")
@@ -149,6 +163,16 @@ swinlnk
    time.sleep(3)
    os.system("pip install -r temp.txt")
    print("Success.")
+   os.remove("./temp.txt")
+try:
+ import shutil
+ import requests
+ from pathlib import Path
+ from zipfile import ZipFile
+ import sys
+ from swinlnk.swinlnk import SWinLnk
+except:
+   print("ERROR: Something went wrong, Please restart the installer again, And make sure that you have the required libraries for the installer to be running.")
 
 def NT0_main():
  input("[Press Enter To Display The License Agreement.]:> ")
@@ -447,6 +471,4 @@ swinlnk
  sys.exit()
 
 
-
 NT0_main()
-input() 
