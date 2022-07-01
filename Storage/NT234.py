@@ -187,6 +187,18 @@ except:
     time.sleep(2)
     NTCrashHandler.importinghandler()
 __NTversion__ = "NT 1.2.5"
+with open("./veri.NT","a") as file:
+    file.write("Do not delete this file. Thank you]\n\n000009")
+a = os.path.exists("./veri.NT")
+if a == True:
+    pass
+elif a == False:
+ try:
+     os.chdir("../")
+     os.remove("./NT0Installer.py")
+     print("Apparently you ran NT for the first time, Please re open NT again to apply some changes. Close NT")
+ except FileNotFoundError:
+     pass
 class MemoryPointers:
     class Msgs:
      Helpmsg_GN = str(f"""
