@@ -35,5 +35,19 @@ The Package Service: `"NT Bound"`
 You Will Be Asked To Install It During The Procedure Of The Installation, To Install The Service Pack(NT Bound)
 + Which revolves around the information of the device that operates the product where there is the possibility to correct errors or discuss them if they are related to a particular model of devices. or sending reports using this pack service.(note: this program is in need of an internet connections sometimes. to work properly(in other words without being bothered by poping that you are not connected.)) but this is barely may happen and its only include the updates checking.(which is barely too ,***jk***)
 --->
+# The current state of available's
+
+| Function : | Contnet :|
+| ---------- | -------- |
+|dh| `Displays several information about the giving hostname` | 
+|usv| `Scans for the giving username on more than 350 sites around internet (Sites are being updated usually)`|
+|dti|`Extract useful information from a single users Discord authorization token.`|
+|stn|`Creates a grabbing file that Grabs several information from the machine that runs the following script through a Discord Webhook.`|
+|fcc|`Generates a random fake credit card information.(Applyable)`|
+|netstats|`Displays the current connections on your machine`|
+<h3>NT Is still under the development section for now There will be much more functions soon in the future.</h3>
+<h4NT Has implemented itself to autoupdate itself You will be informed once there is a new update available And you will have the choice to update it The update procedure is pretty simple You just run the update command ```[NT]:> update``` Ad NT will assure you that the update procedure will start.</h4>
+
+
 # NotAbleChanges (Whats new, last changes, logs, general-side changes.)
   **usually you will find the specific details about the current updates in the <a href="https://github.com/suegdu/NT-RTE/releases"><ins>***Releases***</ins></a> page under your very specific version.* 
