@@ -131,6 +131,7 @@ import  time
 import os
 import ctypes
 import sys
+import requests
 try:
  import shutil
  import requests
@@ -168,7 +169,6 @@ print("NT Installer version: 1.0 Author: suegdu Source:https://github.com/suegdu
 
 try:
  import shutil
- import requests
  from pathlib import Path
  from zipfile import ZipFile
  import sys
