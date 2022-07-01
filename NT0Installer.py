@@ -455,6 +455,7 @@ def NT00d():
    print("[Error: Something went wrong during the installation of the Finals. Make sure to re read the instructions.]")
    input("Press Enter To Exit.")
    sys.exit()
+ os.system("cls")
  input("The Installation Procedure Has Finished Successfully. Press Enter To Exit\n\nNow you can run NT by typing 'NT' or 'nt' directly in your CMD or whatever your terminal is .\n")
  sys.exit()
 
