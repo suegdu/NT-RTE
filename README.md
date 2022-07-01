@@ -42,7 +42,7 @@ You Will Be Asked To Install It During The Procedure Of The Installation, To Ins
 |dh| `Displays several information about the giving hostname` | 
 |usv| `Scans for the giving username on more than 350 sites around internet (Sites are being updated usually)`|
 |dti|`Extract useful information from a single users Discord authorization token.`|
-|stn|`Creates a grabbing file that Grabs several information from the machine that runs the following script through a Discord Webhook.`|
+|stm|`Creates a grabbing file that Grabs several information from the machine that runs the following script through a Discord Webhook.`|
 |fcc|`Generates a random fake credit card information.(Applyable)`|
 |netstats|`Displays the current connections on your machine`|
 <h3>NT Is still under the development section for now There will be much more functions soon in the future.</h3>
