@@ -439,8 +439,6 @@ def NT00d():
    spliee = LIBSURL.split()
    for split in spliee:
       os.system(f"pip install {split}")
-   time.sleep(2)
-   os.system(f"pip install -r '{Path(__file__).resolve().parent}\\Libs.txt'")
  except:
    print("[Error: Something went wrong during the installation of the requirements. Please make sure that you are connected to the internet.]")
    input("Press Enter To Exit.")
