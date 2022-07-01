@@ -1,8 +1,14 @@
 Author: suegdu | suegdu Industries
+
 Source: https://github.com/suegdu/NT-RTE
+
 Github: https://github.com/suegdu/NT-RTE
+
 This Folder maintain a Sub functions and handlers For NT.
+
 And they are licensed under the CC0 1.0 Universal license
+
+
 Creative Commons Legal Code
 CC0 1.0 Universal
     CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE
