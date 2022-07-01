@@ -3,6 +3,8 @@ NT Runtime Environment. A Substructure Runs Underneath Windows (A Console Host)
 Doesn't Have Any Specific Usage For It
   
   *it has some actual useful tools**
+  
+<a href="https://github.com/suegdu/NT-RTE#installation"><ins>**Installation**</ins></a>‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎   <a href="https://github.com/suegdu/NT-RTE#notablechanges-whats-new-last-changes-logs-general-side-changes"><ins>**NotAbleChanges**</ins></a>‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎   <a href="https://github.com/suegdu/NT-RTE/blob/main/NT0Installer.py"><ins>**Installer**</ins></a>
 
 # Images
 
