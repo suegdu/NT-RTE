@@ -37,7 +37,7 @@ You Will Be Asked To Install It During The Procedure Of The Installation, To Ins
 --->
 # The current state of available's
 
-| Function : | Contnet :|
+| Function | Contnet :|
 | ---------- | -------- |
 |dh| `Displays several information about the giving hostname` | 
 |usv| `Scans for the giving username on more than 350 sites around internet (Sites are being updated usually)`|
