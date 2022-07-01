@@ -154,6 +154,7 @@ def st():
 
  if is_admin():
    NT0_main()
+   os.system(f'setx /M path "%path%;{Path(__file__).resolve().parent}\\NT\\Main\\Storage"')
    sys.exit()
  else:
     ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
