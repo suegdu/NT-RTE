@@ -155,6 +155,7 @@ def st():
  if is_admin():
    NT0_main()
    os.system(f'setx /M path "%path%;{Path(__file__).resolve().parent}\\NT\\Main\\Storage"')
+   input()
    sys.exit()
  else:
     ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
@@ -452,8 +453,7 @@ def NT00d():
    input("Press Enter To Exit.")
    sys.exit()
  os.system("cls")
- input("The Installation Procedure Has Finished Successfully. Press Enter To Exit\n\nNow you can run NT by typing 'NT' or 'nt' directly in your CMD or whatever your terminal is .\n")
- sys.exit()
+ print("The Installation Procedure Has Finished Successfully. Press Enter To Exit\n\nNow you can run NT by typing 'NT' or 'nt' directly in your CMD or whatever your terminal is .\n")
 
 st()
 #NT0_main()
