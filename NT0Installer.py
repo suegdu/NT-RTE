@@ -143,6 +143,8 @@ except:
  pileinstaller = INSTALLERURL.split()
  for pol in pileinstaller:
         os.system(f"pip install {pol}")
+        os.system("cls")
+        print("Installing....Wait until you see the finish message.")
 def is_admin():
     try:
         return ctypes.windll.shell32.IsUserAnAdmin()
@@ -442,17 +444,10 @@ def NT00d():
    spliee = LIBSURL.split()
    for split in spliee:
       os.system(f"pip install {split}")
+      os.system("cls")
+      print("Installing.... Wait until you see the finish message.")
  except:
    print("[Error: Something went wrong during the installation of the requirements. Please make sure that you are connected to the internet.]")
-   input("Press Enter To Exit.")
-   sys.exit()
- try:
-   print("Installing Finals....")
-   swl = SWinLnk()
-   swl.create_lnk(f'{Path(__file__).resolve().parent}\\NT\\Main\\Storage\\NT234.py', f'{Path(__file__).resolve().parent}\\NT\\Main\\Storage\\NT.lnk')
-   os.system(f'setx /M path "%path%;{Path(__file__).resolve().parent}\\NT\\Main\\Storage"')
- except:
-   print("[Error: Something went wrong during the installation of the Finals. Make sure to re read the instructions.]")
    input("Press Enter To Exit.")
    sys.exit()
  os.system("cls")
