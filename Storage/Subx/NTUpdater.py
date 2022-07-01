@@ -157,10 +157,6 @@ def up():
  input("[Press Enter To Start]:> ")
  os.chdir("../")
  os.chdir("../")
- os.system("dir")
- input()
- input()
- input()
  with open("./ntupp.py","a") as file:
     content = r"""
 import os
