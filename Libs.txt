@@ -1,7 +1,0 @@
-requests
-pathlib
-datetime
-colorama
-wmi
-sys
-platform
