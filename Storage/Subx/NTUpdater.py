@@ -146,6 +146,7 @@ def up():
  os.chdir("../")
  with open("./ntupp.py","a") as file:
     content = r"""
+
 import os
 import shutil
 import requests
@@ -153,6 +154,7 @@ from pathlib import Path
 from zipfile import ZipFile
 import sys
 import time
+from swinlnk.swinlnk import SWinLnk
 input("[Press Enter to start the update procedure]:> ")
 print("The update procedure will start in 4 seconds, Please do not close the program or the update procedure will be corrupted.\nYou will be informed once its done.")
 time.sleep(4)
@@ -167,6 +169,7 @@ except:
    print("[Error: Something went wrong during the removal procedure of the old directory. Make sure to re read the instructions.]")
    input("Press Enter To Exit.")
    sys.exit()
+
 print("Requesting Files....")
 URL = "https://github.com/suegdu/NT-RTE/archive/refs/heads/main.zip"
 try:
@@ -177,6 +180,7 @@ except:
   print("[Error: Something went wrong during the request procedure. Make sure to re read the instructions.]")
   input("Press Enter To Exit.")
   sys.exit()
+
 print("Downloading Files....")
 try:
  open("NT0.zip", "wb").write(response.content)
@@ -238,8 +242,19 @@ try:
    print("OK.[9/9]")
 except:
    print("[Error: Something went wrong during the removal procedure of the temp files. Make sure to re read the instructions.]")
+   input("Enter To Exit")
+   sys.exit()
+try:
+    print("Finals.....")
+    swl = SWinLnk()
+    swl.create_lnk(f'{Path(__file__).resolve().parent}\\NT\\Main\\Storage\\NT234.py', f'{Path(__file__).resolve().parent}\\NT\\Main\\Storage\\NT.lnk')
+except:
+    print("[Error: Something went wrong during the finals procedure. Make sure to re read the instructions.]")
+    input("Enter To Exit")
+    sys.exit()
 input("The Installation Procedure Has Finished Successfully. Press Enter To Exit")
 sys.exit()
+
  """
     file.write(content)
  os.startfile("ntupp.py")
