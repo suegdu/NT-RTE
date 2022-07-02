@@ -129,13 +129,13 @@ express Statement of Purpose.
 """
 from Subx import NTBackgourndmgr
 import time
+import os
+os.system("title Loading System Files....")
 from Subx import NTCrashHandler
 print("Loading RTE....")
 print("...............")
 print("Importing Site-Packages.....")
 try:
- import os
- os.system("title Loading System Files....")
  from pathlib import Path
  from datetime import datetime
  import wmi
