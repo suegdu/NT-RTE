@@ -22,7 +22,7 @@ Doesn't Have Any Specific Usage For It
 
 
 # Installation
-You are required to have python3 and above installed.
+You are required to have python3 and further installed.
 
 First thing first you must know that if you want to run NT properly you just have to download the install <a href="https://github.com/suegdu/NT-RTE/blob/main/NT0Installer.py"><ins>***(NT0Installer.py)***</ins></a> And simply run it.
 It's going to install NT and all its components and requirements. And does inform you once its done. Without the need of installing the whole source code. As the installer would offer much easier steps during the installation process and some other stuff that's going to be applied only during the installation through the installer. You can run the installer directly through your python3 interpreter, or you can compile it and run it.***(It is recommended that you compile the installer and run it as an administrator to avoid issues during the installation proceedure.)***
