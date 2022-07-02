@@ -134,4 +134,4 @@ def main():
  try:
      os.rmdir("./__pycache__")
  except FileNotFoundError:
-    print("ok")
+    pass
