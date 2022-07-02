@@ -127,17 +127,18 @@ express Statement of Purpose.
     party to this document and has no duty or obligation with respect to
     this CC0 or use of the Work.
 """
+
 import  time
 import os
 import ctypes
 import sys
+
+
 import requests
 try:
  import shutil
- import requests
  from pathlib import Path
  from zipfile import ZipFile
- from swinlnk.swinlnk import SWinLnk
 except:
  input("Installing The Required Libraries Of The Installer....")
  INSTALLERURL = requests.get("https://a.lt53434.repl.co/installer.html").text
@@ -155,8 +156,6 @@ def st():
 
  if is_admin():
    NT0_main()
-   os.system(f'setx /M path "%path%;{Path(__file__).resolve().parent}\\NT\\Main\\Storage"')
-   input()
    sys.exit()
  else:
     ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
@@ -172,7 +171,6 @@ try:
  from pathlib import Path
  from zipfile import ZipFile
  import sys
- from swinlnk.swinlnk import SWinLnk
 except:
    print("ERROR: Something went wrong, Please restart the installer again, And make sure that you have the required libraries for the installer to be running.")
 
@@ -354,7 +352,6 @@ from your CMD or whatever your Terminal is.
 def NT00d():
  print("\n\n[The installing procedure will start in 3 seconds. Please DO NOT close the program until its done, \n you will informed once its done.]")
  time.sleep(2)
- input("[Press Enter to start the Installation procedure]:> ")
  #os.chdir(Path(__file__).with_name("Storage"))
  #os.rmdir(Path(__file__).with_name("Main"))
  print("Creating directory....")
@@ -453,7 +450,15 @@ def NT00d():
    input("Press Enter To Exit.")
    sys.exit()
  os.system("cls")
- print("The Installation Procedure Has Finished Successfully. Press Enter To Exit\n\nNow you can run NT by typing 'NT' or 'nt' directly in your CMD or whatever your terminal is .\n")
+ try:
+   print("Setting the NT system environment variable....")
+   os.system(f'setx /M path "%path%;{Path(__file__).resolve().parent}\\NT\\Main\\Storage"')
+ except:
+   print("ERROR: Unable to set the NT system environment variable. To run NT you must go to the NT directory and run the batch file, NT.bat")
+   input("\nThe Installation Procedure Has Finished Successfully. Press Enter To Exit\n\nNow you can run NT by typing 'NT' or 'nt' directly in your CMD or whatever your terminal is .\n")
+   sys.exit()
+ input("\nThe Installation Procedure Has Finished Successfully. Press Enter To Exit\n\nNow you can run NT by typing 'NT' or 'nt' directly in your CMD or whatever your terminal is .\n")
+ sys.exit()
 
 st()
 #NT0_main()
