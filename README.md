@@ -58,5 +58,3 @@ You Will Be Asked To Install It During The Procedure Of The Installation, To Ins
    ‎‏‏‎   
     ‎‏‏‎   
     
-# NotAbleChanges (Whats new, last changes, logs, general-side changes.)
-  **usually you will find the specific details about the current updates in the <a href="https://github.com/suegdu/NT-RTE/releases"><ins>***Releases***</ins></a> page under your very specific version.* 
