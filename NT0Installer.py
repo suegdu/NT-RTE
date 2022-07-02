@@ -455,7 +455,7 @@ def NT00d():
    os.system(f'setx /M path "%path%;{Path(__file__).resolve().parent}\\NT\\Main\\Storage"')
  except:
    print("ERROR: Unable to set the NT system environment variable. To run NT you must go to the NT directory and run the batch file, NT.bat")
-   input("\nThe Installation Procedure Has Finished Successfully. Press Enter To Exit\n\nNow you can run NT by typing 'NT' or 'nt' directly in your CMD or whatever your terminal is .\n")
+
    sys.exit()
  input("\nThe Installation Procedure Has Finished Successfully. Press Enter To Exit\n\nNow you can run NT by typing 'NT' or 'nt' directly in your CMD or whatever your terminal is .\n")
  sys.exit()
