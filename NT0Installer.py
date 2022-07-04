@@ -127,31 +127,42 @@ express Statement of Purpose.
     party to this document and has no duty or obligation with respect to
     this CC0 or use of the Work.
 """
-
+__version__ = str("NT0Installer 1.7  Source: github.com/suegdu/NT-RTE")
 import  time
 import os
+def titlemain(string=None):
+   os.system(f"title {__version__} - {string}")
+titlemain()
 import ctypes
 import sys
 
-
 import requests
-try:
- import shutil
- from pathlib import Path
- from zipfile import ZipFile
-except:
- input("Installing The Required Libraries Of The Installer....")
+def insmislib():
+ print("Error: Some of the installer's libraries are missing. Starting the installing procedure....")
+ print("Installing The Required Libraries Of The Installer....")
  INSTALLERURL = requests.get("https://a.lt53434.repl.co/installer.html").text
  pileinstaller = INSTALLERURL.split()
  for pol in pileinstaller:
         os.system(f"pip install {pol}")
         os.system("cls")
         print("Installing....Wait until you see the finish message.")
+ print("Done.")
+ input("[Press Enter To Start.]")
+ st()
+try:
+ print("Importing Installer's Libraries....")
+ import shutil
+ from pathlib import Path
+ from zipfile import ZipFile
+ os.system("cls")
+except:
+   insmislib()
 def is_admin():
     try:
         return ctypes.windll.shell32.IsUserAnAdmin()
     except:
         return False
+
 def st():
 
  if is_admin():
@@ -164,24 +175,18 @@ def st():
     input("Press Enter To Exit.")
     sys.exit()
 
-print("NT Installer version: 1.0 Author: suegdu Source:https://github.com/suegdu/NT-RTE Github:https://github.com/suegdu")
-
-try:
- import shutil
- from pathlib import Path
- from zipfile import ZipFile
- import sys
-except:
-   print("ERROR: Something went wrong, Please restart the installer again, And make sure that you have the required libraries for the installer to be running.")
-
+print(f"NT Installer version: {__version__} Author: suegdu")
 def NT0_main():
  input("[Press Enter To Display The License Agreement.]:> ")
- print("""
-Author: suegdu | suegdu Industries
-Source: https://github.com/suegdu/NT-RTE
-Github: https://github.com/suegdu/NT-RTE
-The NT Installer Manager function are written under this file NT0Installer.py
-And it is licensed under the CC0 1.0 Universal license.
+ print(f"""
+╔══════════════════════════════════════════════════════════════════════════════╗
+║Author: suegdu | suegdu Industries                                            ║
+║Source: https://github.com/suegdu/NT-RTE                                      ║
+║Github: https://github.com/suegdu/NT-RTE                                      ║
+║Version: {__version__}                   ║
+║The NT Installer Manager function are written under this file NT0Installer.py ║
+║And it is licensed under the CC0 1.0 Universal license.                       ║
+╚══════════════════════════════════════════════════════════════════════════════╝
 """)
  input("[Press Enter To Continue]:> ")
  print("""
@@ -309,15 +314,16 @@ express Statement of Purpose.
  
  
 """)
- agr = input("[Please, Type 'I AGREE' All caps to continue.]:> ")
+ agr = input("[!]: [Please, Type 'I AGREE' All caps to continue.]:> ")
  if agr =="I AGREE":
     NT0_procedure()
  else:
-    print("\nPlease make sure to type it again all caps, 'I AGREE'.\n")
-    input("[Press Enter To Restart The Installing Procedure.]")
+    print("\n[!]: [Please make sure to type it again all caps, 'I AGREE'.]\n")
+    input("[!]: [Press Enter To Restart The Installing Procedure.]")
     os.system("cls")
     NT0_main()
 def NT0_procedure():
+    os.system("cls")
     content = f"""
 ----------------------------------------------------------------
 Should inform you that NT will create its own working directory, in the location of the installer which is 
@@ -336,128 +342,142 @@ from your CMD or whatever your Terminal is.
     
 """
     print(content)
-    input("[Please, Read this line carefully and then Press Enter.]:> ")
-    s1 = input(f"[NT will create its own working directory, in the location of the installer which is\n\n'{Path(__file__).resolve().parent}'\n\nIs this okay? [YES/NO]all caps.]:> ")
+    input("[!:] [Please, Read this line carefully and then Press Enter.]:> ")
+    os.system("cls")
+    s1 = input(f"[!]: [NT will create its own working directory, in the location of the installer which is\n\n'{Path(__file__).resolve().parent}'\n\n[!] [Is this okay? [YES/NO]all caps.]:> ")
     if s1 == "YES":
         NT00d()
     elif s1 =="NO":
-        print("\nPlease choose a valid correct location for NT to be installed on, For changing the directory close the installer and \nmove it the directory that you want it to be installed on, and run the installer file again")
+        print("\n[!]: [Please choose a valid correct location for NT to be installed on]\n[!] [For changing the directory close the installer and move it the directory that you want it to be installed on,]\n[and run the installer file again]\n")
         input("[Press Enter To Exit]")
         os._exit(0)
     else:
-        print("Error: Please Choose a correct input all caps. Press Enter to restart the installing procedure")
+        print("[!]: [Error: Please Choose a correct input all caps. Press Enter to restart the installing procedure]")
         input()
         NT0_procedure()
 
 def NT00d():
- print("\n\n[The installing procedure will start in 3 seconds. Please DO NOT close the program until its done, \n you will informed once its done.]")
+ os.system("cls")
+ print("\n\n[!]: [The installing procedure will start in 3 seconds. Please DO NOT close the program until its done, \n      you will be informed once its done.]")
  time.sleep(2)
  #os.chdir(Path(__file__).with_name("Storage"))
  #os.rmdir(Path(__file__).with_name("Main"))
- print("Creating directory....")
+ print("\n[INF]: [Creating directory....]")
  try:
   #os.mkdir("./NT")
-  print("OK.[1/9]")
+  print("[#] OK.[1/9]")
  except:
-    print("[Error: Something went wrong during the Directory Creation procedure. Make sure to re read the instructions.]")
-    input("Press Enter To Exit.")
+    print("[!]: [Error: Something went wrong during the Directory Creation procedure. Make sure to re read the instructions.]")
+    input("[Press Enter To Exit.]")
     sys.exit()
- 
- print("Requesting Files....")
+ titlemain(string="Started the installing procedure....")
+ print("\n[INF]: [Requesting Files....]")
  URL = "https://github.com/suegdu/NT-RTE/archive/refs/heads/main.zip"
  try:
   response = requests.get(URL)
-  print("OK.[2/9]")
+  print("[#] OK.[2/9]")
   time.sleep(1)
  except:
-   print("[Error: Something went wrong during the request procedure. Make sure to re read the instructions.p(And have an internet connection)]")
-   input("Press Enter To Exit.")
+   titlemain(string="Error")
+   print("[!]: [Error: Something went wrong during the request procedure. Make sure to re read the instructions.p(And have an internet connection)]")
+   input("[Press Enter To Exit.]")
    sys.exit()
  
- print("Downloading Files....")
+ print("\n[INF]: [Downloading Files....]")
  try:
   open("NT0.zip", "wb").write(response.content)
-  print("OK.[3/9]")
+  print("[#] OK.[3/9]")
   time.sleep(1)
  except:
-    print("[Error: Something went wrong during the download procedure. Make sure to re read the instructions.]")
-    input("Press Enter To Exit.")
+    titlemain(string="Error")
+    print("[!]: [Error: Something went wrong during the download procedure. Make sure to re read the instructions.]")
+    input("[Press Enter To Exit.]")
     sys.exit()
- print("Defining Files....")
+ print("\n[INF]: [Defining Files....]")
  try:
   filee = rf"{Path(__file__).resolve().parent}\NT0.zip"
-  print("OK.[4/9]")
+  print("[#] OK.[4/9]")
   time.sleep(1)
  except:
-    print("[Error: Something went wrong during the Defining procedure. Make sure to re read the instructions.]")
-    input("Press Enter To Exit.")
+    titlemain(string="Error")
+    print("[!]: [Error: Something went wrong during the Defining procedure. Make sure to re read the instructions.]")
+    input("[Press Enter To Exit.]")
     sys.exit()
- print("Unpacking Files....")
+ print("\n[INF] :[Unpacking Files....]")
  try:
   ZipFile(filee).extractall(".\\")
-  print("OK.[5/9]")
+  print("[#] OK.[5/9]")
   time.sleep(1)
  except:
-    print("[Error: Something went wrong during the Unpacking procedure. Make sure to re read the instructions.]")
-    input("Press Enter To Exit.")
+    titlemain(string="Error")
+    print("[!]: [Error: Something went wrong during the Unpacking procedure. Make sure to re read the instructions.]")
+    print("[+]: [If you continued facing the same error, try to open the installer on another directory and have all\nthe permissions. If still, try to run the installer from a code interpreter for example Visual Studio Code, If you are using the .py source installer.]")
+    input("[Press Enter To Exit.]")
     sys.exit()
- print("Removing Packed Files....")
+ print("\n[INF]: [Removing Packed Files....]")
  try:
   os.remove(filee)
-  print("OK.[6/9]")
+  print("[#] OK.[6/9]")
   time.sleep(1)
  except:
-    print("[Error: Something went wrong during the removal procedure of the packed files. Make sure to re read the instructions.]")
-    input("Press Enter To Exit.")
+    titlemain(string="Error")
+    print("[!]: [Error: Something went wrong during the removal procedure of the packed files. Make sure to re read the instructions.]")
+    input("[Press Enter To Exit.]")
     sys.exit()
- print("Redirecting to directory....")
+ print("\n[INF]: [Redirecting to directory....]")
  try:
-  print("OK.[7/9]")
+  print("[#] OK.[7/9]")
   time.sleep(1)
  except:
-    print("[Error: Something went wrong during the redirecting directory procedure. Make sure to re read the instructions.]")
-    input("Press Enter To Exit.")
+    titlemain(string="Error")
+    print("[!]: [Error: Something went wrong during the redirecting directory procedure. Make sure to re read the instructions.]")
+    input("[Press Enter To Exit.]")
     sys.exit()
  ss = "./NT-RTE-main/Storage"
  ee = "./NT/Main/Storage"
- print("Copying Files.....")
+ print("\n[INF]: [Copying Files.....]")
  try:
   shutil.copytree(ss,ee)
-  print("OK.[8/9]")
+  print("[#] OK.[8/9]")
   time.sleep(1)
  except:
-  print("[Error: Something went wrong during the copying files procedure. Make sure to re read the instructions.]")
-  input("Press Enter To Exit.")
+  titlemain(string="Error")
+  print("[!]: [Error: Something went wrong during the copying files procedure. Make sure to re read the instructions.]")
+  input("[Press Enter To Exit.]")
   sys.exit()
- print("Removing Temp Files....")
+ print("\n[INF]: [Removing Temp Files....]")
  try:
     shutil.rmtree(Path(__file__).with_name("NT-RTE-main"))
-    print("OK.[9/9]")
+    print("[#] OK.[9/9]")
  except:
-    print("[Error: Something went wrong during the removal procedure of the temp files. Make sure to re read the instructions.]")
-    input("Press Enter To Exit.")
+    titlemain(string="Error")
+    print("[!]: [Error: Something went wrong during the removal procedure of the temp files. Make sure to re read the instructions.]")
+    input("[Press Enter To Exit.]")
     sys.exit()
- print("Installing Requirements...")
+ print("\n[INF]: [Installing Requirements...]")
  try:
    LIBSURL = requests.get("https://a.lt53434.repl.co/lib.html").text
    spliee = LIBSURL.split()
    for split in spliee:
       os.system(f"pip install {split}")
       os.system("cls")
-      print("Installing.... Wait until you see the finish message.")
+      print("\n[INF]: [Installing.... Wait until you see the finish message.]")
  except:
-   print("[Error: Something went wrong during the installation of the requirements. Please make sure that you are connected to the internet.]")
-   input("Press Enter To Exit.")
+   titlemain(string="Error")
+   print("[!]: [Error: Something went wrong during the installation of the requirements. Please make sure that you are connected to the internet.]")
+   input("[Press Enter To Exit.]")
    sys.exit()
  os.system("cls")
  try:
-   print("Setting the NT system environment variable....")
+   print("\n[INF]: [Setting the NT system environment variable....]")
    os.system(f'setx /M path "%path%;{Path(__file__).resolve().parent}\\NT\\Main\\Storage"')
  except:
-   print("ERROR: Unable to set the NT system environment variable. To run NT you must go to the NT directory and run the batch file, NT.bat")
+   titlemain(string="Error")
+   print("[!]: [ERROR: Unable to set the NT system environment variable. To run NT you must go to the NT directory and run the batch file, NT.bat]")
 
    sys.exit()
- input("\nThe Installation Procedure Has Finished Successfully. Press Enter To Exit\n\nNow you can run NT by typing 'NT' or 'nt' directly in your CMD or whatever your terminal is .\n")
+ titlemain(string="The Installation Procedure Has Finished.")
+ input("\n[=] [The Installation Procedure Has Finished Successfully. Press Enter To Exit]\n\n[!] [Now you can run NT by typing 'NT' or 'nt' directly in your CMD or whatever your terminal is IF:\n     If the 'Setting the NT system environment variable' procedure has be gone done well.]\n")
  sys.exit()
 
 st()
