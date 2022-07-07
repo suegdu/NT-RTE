@@ -348,7 +348,7 @@ from your CMD or whatever your Terminal is.
     if s1 == "YES":
         NT00d()
     elif s1 =="NO":
-        print("\n[!]: [Please choose a valid correct location for NT to be installed on]\n[!] [For changing the directory close the installer and move it the directory that you want it to be installed on,]\n[and run the installer file again]\n")
+        print("\n[!]: [Please choose a valid correct location for NT to be installed on]\n[!]: [For changing the directory close the installer and move it the directory that you want it to be installed on,]\n[and run the installer file again]\n")
         input("[Press Enter To Exit]")
         os._exit(0)
     else:
